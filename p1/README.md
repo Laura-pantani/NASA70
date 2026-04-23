@@ -1,12 +1,60 @@
-# Nasa70
+¨SUPSI 2026  
+Corso d’interaction design, CV429.01  
+Docenti: A. Gysin, G. Profeta  
 
-## Compiti
+Progetto 1: La conquista dello spazio
 
-1 - [Visualizzazione della posizione attuale della ISS](https://...)
+# Hubble space telescope
+Autore: Laura Pantani \
+[Titolo progetto](https://github.com/ixd-supsi/2026/tree/main/esempi/es06_array_7)
 
-2 - [Visualizzazione della posizione dei satelliti](https://...)
 
-## Intezioni progetto
+## Introduzione e tema
+Il mio progetto intende rendere omaggio al satellite Hubble. Dal 1985 fino a oggi, grazie al suo contributo, abbiamo ottenuto le prime immagini dettagliate dello spazio, fondamentali per lo studio e la comprensione dell’universo.
 
-L’intenzione del mio progetto è quella di stimolare l’interesse e la creatività dei bambini e dei ragazzi, invitandoli a scoprire uno dei più importanti satelliti che ha fatto la storia della NASA e dello spazio che conosciamo oggi. Il protagonista sarà l’Hubble Space Telescope, la grande “macchina fotografica dell’universo” che è ormai in orbita da oltre 30 anni.
-Gli utenti scopriranno la sua storia e la sua creazione, e capiranno che un giorno il satellite smetterà di funzionare. A quel punto saranno loro ad essere incaricati di ripararlo e riassemblarlo, utilizzando le nozioni apprese in precedenza nel capitolo dedicato alla nascita di Hubble.
+
+## Riferimenti progettuali
+Al momento non sono stati individuati riferimenti progettuali specifici.
+
+ 
+
+
+## Design dell’interfaccia e modalità di interazione
+Il progetto si sviluppa come una piattaforma documentativa dedicata alla storia di Hubble. In una prima fase, l’utente può esplorare contenuti informativi sul satellite e sulla sua evoluzione nel tempo. Successivamente, viene presentata una sezione di archivio che raccoglie una selezione di immagini dello spazio catturate da Hubble, consultabili in modo semplice e intuitivo.
+
+https://github.com/user-attachments/assets/38d1768e-a90e-45dd-b12b-1ac0aa1151b3
+
+[<img src="doc/cards.gif" width="500" alt="Magic trick">]()
+
+
+## Tecnologia usata
+Ho usato un visual code con gemini code assist.
+
+
+```JavaScript
+const image = new Image();
+image.onload = () => {
+	gl.bindTexture(gl.TEXTURE_2D, texture);
+	gl.texImage2D(
+		gl.TEXTURE_2D,
+		level,
+		internalFormat,
+		srcFormat,
+		srcType,
+		image
+	);
+	if (isPowerOf2(image.width) && isPowerOf2(image.height)) {
+		gl.generateMipmap(gl.TEXTURE_2D);
+	} else {
+		gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+		gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+		gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+	}
+};
+image.src = url;
+```
+
+## Target e contesto d’uso
+Il target del mio progetto sono i ragazzi e il possibile contesto d'uso é educativo e scolastico.
+
+[<img src="doc/munari.jpg" width="300" alt="Supplemento al dizionario italiano">]()
